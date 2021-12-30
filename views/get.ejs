@@ -1,11 +1,3 @@
-<!-- 
-    Name: Lucas Abeln
-    Class: Web Development
-    Assignment: WPD4
-    Last Modified: 12/6/21
-    Desc: Logs page html document
--->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,25 +10,21 @@
         <table class="data-table">
           <thead class="data-headers">
             <tr>
+              <td>Name</td>
               <td>Type</td>
               <td>Time</td>
               <td>Meters</td>
               <td>Rate</td>
-              <td>Month</td>
-              <td>Day</td>
-              <td>Year</td>
             </tr>
           </thead>
           <tbody>
           <% exer.forEach(function(details) { %>
             <tr>
+              <td><%= details.username %></td>
               <td><%= details.type %></td>
               <td><%= details.time %></td>
               <td><%= details.meters %></td>
               <td><%= details.rate %></td>
-              <td><%= details.month %></td>
-              <td><%= details.day %></td>
-              <td><%= details.year %></td>
               <td><a href="/delete/<%= details._id %>">Delete</a></td>
             </tr>
           <% }) %>

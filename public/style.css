@@ -17,11 +17,7 @@
     flex: 0 25%;
     text-align: center;
     color: white;
-    background: rgb(38, 38, 78);
-}
-#container {
-    display: flex;
-    flex-direction: row;
+    background-color: rgba(0,0,0,.5);
 }
 .lab{
     text-align: center;
@@ -32,7 +28,6 @@
 }
 #log-canvas{
     flex: 1 75%;
-    background-image: url("Arnold.jpeg");
     background-size: 100%;
 }
 #input-label{
@@ -116,4 +111,9 @@
 }
 html{
     background-color:beige;
+    background-image: url("Bulldog.png");
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
 }

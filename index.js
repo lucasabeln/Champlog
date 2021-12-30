@@ -26,8 +26,8 @@ app.use('/public', express.static('public'));
 //Connect to Mongo
 client.connect(err => { 
     if(err) throw err;
-   db = client.db("Exerlog").collection("exer");
-   login = client.db("Exerlog").collection("login");
+   db = client.db("Champlog").collection("workout");
+   login = client.db("Champlog").collection("Name");
    console.log("Connected!");
 });
 
@@ -113,9 +113,9 @@ app.post("/show", (req, res) => {
     if(req.body.month == "December"){
         monthID = "12";
     }
-    if(!req.body.time.includes(':') || isNaN(req.body.Intensity) || isNaN(req.body.day)){
+    /*if(!req.body.time.includes(':') || isNaN(req.body.Intensity) || isNaN(req.body.day)){
         res.redirect("/error");
-    }
+    }*/
     else{
         db.insertOne(Object.assign(clean, {"username": user.username, "monthID": monthID}), (err, result) => {
             if (err) return console.log("Error: " + err);
@@ -187,114 +187,14 @@ app.get("/show", (req, res) => {
     });
 });
 
-//Below functions are get requests for each month button.
-app.get("/jan", (req, res) => {
-    db.find({month: "January", username: user.username}).toArray((err, results) => {
-        if (err) return console.log("Error: " + err);
-        res.render("show.ejs", {
+//Get Workouts by past date.
+app.get("/get", (req, res) => {
+    db.find({year: req.query.year, month: req.query.month, day: req.query.day}).toArray((err, results) => {
+        if(err) return console.log("Error: " + err);
+        res.render("get.ejs", {
             exer: results
         });
     });
-});
-
-
-app.get("/feb", (req, res) => {
-    db.find({month: "February", username: user.username}).toArray((err, results) => {
-        if (err) return console.log("Error: " + err);
-       res.render("show.ejs", {
-           exer: results
-       });
-   });
-});
-
-app.get("/mar", (req, res) => {
-   db.find({month: "March", username: user.username}).toArray((err, results) => {
-       if (err) return console.log("Error: " + err);
-       res.render("show.ejs", {
-           exer: results
-       });
-   });
-});
-
-app.get("/apr", (req, res) => {
-   db.find({month: "April", username: user.username}).toArray((err, results) => {
-       if (err) return console.log("Error: " + err);
-       res.render("show.ejs", {
-           exer: results
-       });
-   });
-});
-
-app.get("/may", (req, res) => {
-   db.find({month: "May", username: user.username}).toArray((err, results) => {
-       if (err) return console.log("Error: " + err);
-       res.render("show.ejs", {
-           exer: results
-       });
-   });
-});
-
-app.get("/jun", (req, res) => {
-   db.find({month: "June", username: user.username}).toArray((err, results) => {
-       if (err) return console.log("Error: " + err);
-       res.render("show.ejs", {
-           exer: results
-       });
-   });
-});
-
-app.get("/jul", (req, res) => {
-   db.find({month: "July", username: user.username}).toArray((err, results) => {
-       if (err) return console.log("Error: " + err);
-       res.render("show.ejs", {
-           exer: results
-       });
-   });
-});
-
-app.get("/aug", (req, res) => {
-   db.find({month: "August", username: user.username}).toArray((err, results) => {
-       if (err) return console.log("Error: " + err);
-       res.render("show.ejs", {
-           exer: results
-       });
-   });
-});
-
-app.get("/sep", (req, res) => {
-   db.find({month: "September", username: user.username}).toArray((err, results) => {
-       if (err) return console.log("Error: " + err);
-       res.render("show.ejs", {
-           exer: results
-       });
-   });
-});
-
-app.get("/oct", (req, res) => {
-   db.find({month: "October", username: user.username}).toArray((err, results) => {
-       if (err) return console.log("Error: " + err);
-       res.render("show.ejs", {
-           exer: results
-       });
-   });
-});
-
-app.get("/nov", (req, res) => {
-   db.find({month: "November", username: user.username}).toArray((err, results) => {
-       if (err) return console.log("Error: " + err);
-       res.render("show.ejs", {
-           exer: results
-       });
-   });
-});
-
-app.get("/dec", (req, res) => {
-   db.find({month: "December", username: user.username}).toArray((err, results) => {
-       if (err) return console.log("Error: " + err);
-       res.render("show.ejs", {
-           exer: results
-       });
-   });
 });
 
 

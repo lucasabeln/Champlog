@@ -10,82 +10,56 @@
 <html>
     <div id="header">
     <head>
-        <title>Exerlog</title>
+        <title>Champlog</title>
         <link rel="stylesheet" href="/public/style.css" type="text/css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <h1 id="title">Exerlog</h1>
+        <h1 id="title">Champlog</h1>
     </head>
     </div>
-    <div id="container">
-        <body>
+    <body class="body">
             <div id="cat">
-                <form action="/workoutType" method=get>
-                <label id="cat-id" class="lab">Type of Exercise:</label><br>
-                <input type="checkbox" id="sorCheck" name="sort" checked="true" value="true">
-                <label id="check-label" for="Sort-by-date">Sort By Date</label>
+                <form action="/get" method=get>
+                <label id="cat-id" class="lab">Get by Date:</label><br>
                 <br>
                 <br>
-                <select id="input" name = "typeChoice">
-                    <option value="All">All</option>
-                    <option value="Cardio">Cardio</option>
-                    <option value="Weights">Weight Training</option>
-                    <option value="Meditation">Meditation</option>
-                    <option value="Flexibility">Flexibility</option>
-                </select>
+                <label id="input-label" onChange="update()" for="response3">Year:</label>
+                <select id="input" name = "year">
+                    <option value="2021">2021</option>
+                    <option value="2020">2020</option>
+                </select><br>
+                <label id="input-label" onChange="update()" for="response3">Month:</label>
+                <select id="input" class="inputs" name="month" >
+                    <option value="January">January</option>
+                    <option value="February">February</option>
+                    <option value="March">March</option>
+                    <option value="April">April</option>
+                    <option value="May">May</option>
+                    <option value="June">June</option>
+                    <option value="July">July</option>
+                    <option value="August">August</option>
+                    <option value="September">September</option>
+                    <option value="October">October</option>
+                    <option value="November">November</option>
+                    <option value="December">December</option>
+                </select><br>
+                <label id="input-label" for="response3">Day:</label>
+                <input type="text" id="input" class="inputs" name="day" placeholder="00"><br>
                 <input class="back-btn" type="submit" value="Find!">
                 </form>
             <br>
-                <label id="cal-id" class="lab">Month:</label>
-                <br>
-                <form method=get action="/jan">
-                    <input id="filter" type="submit" value="Jan">
-                </form>
-                <form method=get action="/feb">
-                    <input id="filter" type="submit" value="Feb">
-                </form>
-                <form method=get action="/mar">
-                    <input id="filter" type="submit" value="Mar">
-                </form>
-                <form method=get action="/apr">
-                    <input id="filter" type="submit" value="Apr">
-                </form>
-                <form method=get action="/may">
-                    <input id="filter" type="submit" value="May">
-                </form>
-                <form method=get action="/jun">
-                    <input id="filter" type="submit" value="Jun">
-                </form>
-                <form method=get action="/jul">
-                    <input id="filter" type="submit" value="Jul">
-                </form>
-                <form method=get action="/aug">
-                    <input id="filter" type="submit" value="Aug">
-                </form>
-                <form method=get action="/sep">
-                    <input id="filter" type="submit" value="Sep">
-                </form>
-                <form method=get action="/oct">
-                    <input id="filter" type="submit" value="Oct">
-                </form>
-                <form method=get action="/nov">
-                    <input id="filter" type="submit" value="Nov">
-                </form>
-                <form method=get action="/dec">
-                    <input id="filter" type="submit" value="Dec">
-                </form>
                 <br>
                 <form id="log-form" action="/show" target="_blank" method="POST">
                     <label id="input-label"  onChange="update()" for="response1">Workout Type:   </label>
                     <select id="input" name="type" class="input">
-                    <option value="Cardio">Cardio</option>
-                    <option value="Weights">Weight Training</option>
-                    <option value="Meditation">Meditation</option>
-                    <option value="Flexibility">Flexibility</option>
+                    <option value="Erg">Erg</option>
+                    <option value="Bike">Bike</option>
                     </select><br>
-                    <label id="input-label" for="response2">Time Spent: </label>
+                    <label id="input-label" for="response2">Time: </label>
                     <input type="text" id="input" class="inputs" name="time" placeholder="00:00"><br>
-                    <label id="input-label" for="response3">Intensity (1-5):    </label>
-                    <input type="text" id="input" class="inputs" name="Intensity" placeholder="0"><br>
+                    <label id="input-label" for="response2">Meters: </label>
+                    <input type="text" id="input" class="inputs" name="meters" placeholder="0"><br>
+                    <label id="input-label" for="response2">Rate: </label>
+                    <input type="text" id="input" class="inputs" name="rate" placeholder="18"><br>
                     <label id="input-label" onChange="update()" for="response3">Month:</label>
                     <select id="input" class="inputs" name="month" >
                         <option value="January">January</option>
@@ -103,6 +77,8 @@
                     </select><br>
                     <label id="input-label" for="response3">Day:</label>
                     <input type="text" id="input" class="inputs" name="day" placeholder="00"><br>
+                    <label id="input-label" for="response3">Year:</label>
+                    <input type="text" id="input" class="inputs" name="year" placeholder="0000"><br>
                     <button id="submit-btn" class="back-btn">Submit</button>
                 </form>      
             </div>
@@ -145,6 +121,5 @@
                     <h2 class="metric">Goal <br> <br> <%= hours %>:<%= holder %><%= minutes %></h2>
                 </div>
             </div>
-        </body>
-    </div>
+    </body>
 </html>
