@@ -5,4 +5,90 @@
         <link rel="stylesheet" href="/public/style.css" type="text/css">
         <h1 id="title">Champlog</h1>
     </head>
+    <body>
+        <div id="cat">
+            <br>
+            <form id="log-form" action="/workouts" target="_blank" method="POST">
+                <label id="cat-id" class="lab">Start a Workout:</label><br><br>
+                <label id="input-label" onChange="update()" for="response3">Month:</label>
+                <select id="input" class="inputs" name="month" >
+                    <option value="January">January</option>
+                    <option value="February">February</option>
+                    <option value="March">March</option>
+                    <option value="April">April</option>
+                    <option value="May">May</option>
+                    <option value="June">June</option>
+                    <option value="July">July</option>
+                    <option value="August">August</option>
+                    <option value="September">September</option>
+                    <option value="October">October</option>
+                    <option value="November">November</option>
+                    <option value="December">December</option>
+                </select><br>
+                <label id="input-label" for="response3">Day:</label>
+                <input type="text" id="input" class="inputs" name="day" placeholder="00"><br>
+                <label id="input-label" onChange="update()" for="response3">Medium:</label>
+                <select id="input" class="inputs" name="medium" >
+                    <option value="erg">Erg-Any</option>
+                    <option value="slider">Erg-Slider</option>
+                    <option value="stationary">Erg-Stationary</option>
+                    <option value="any">Any-Cardio</option>
+                </select><br>
+                <label id="input-label" onChange="update()" for="response3">Intervals:</label>
+                <select id="input" class="inputs" name="intervals" >
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select><br>
+                <label id="input-label" onChange="update()" for="response3">Meters:</label>
+                <input type="checkbox" id="type-choice" name="meters">
+                <label id="input-label" onChange="update()" for="response3">Time:</label>
+                <input type="checkbox" id="type-choice" name="time"><br>
+                <label id="input-label" for="response3">Value:</label>
+                <input type="text" id="input" class="inputs" name="value" placeholder="00"><br>
+                <input class="back-btn" type="submit" value="Submit">
+            </form>
+            <br>
+            <br>
+            <br>
+            <form action="/get" method=get>
+                <label id="cat-id" class="lab">Find Workout Results:</label><br>
+                <br>
+                <label id="input-label" onChange="update()" for="response3">Year:</label>
+                <select id="input" name = "year">
+                    <option value="2021">2021</option>
+                    <option value="2020">2020</option>
+                </select><br>
+                <label id="input-label" onChange="update()" for="response3">Month:</label>
+                <select id="input" class="inputs" name="month" >
+                    <option value="January">January</option>
+                    <option value="February">February</option>
+                    <option value="March">March</option>
+                    <option value="April">April</option>
+                    <option value="May">May</option>
+                    <option value="June">June</option>
+                    <option value="July">July</option>
+                    <option value="August">August</option>
+                    <option value="September">September</option>
+                    <option value="October">October</option>
+                    <option value="November">November</option>
+                    <option value="December">December</option>
+                </select><br>
+                <label id="input-label" for="response3">Day:</label>
+                <input type="text" id="input" class="inputs" name="day" placeholder="00"><br>
+                <input class="back-btn" type="submit" value="Find!">
+            </form>
+            <br>
+            <br>
+        </div>    
+    </body>
 </html>
