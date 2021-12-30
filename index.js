@@ -17,6 +17,7 @@ const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology:
 var ObjectId = require("mongodb").ObjectID;
 var sanitize = require('mongo-sanitize');
 var user;
+var pass = 'GUMR';
 let date_ob = new Date();
 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -124,6 +125,16 @@ app.post("/show", (req, res) => {
         });
     }
 });
+
+app.get("/coaches", (req, res) =>{
+    console.log(req.query.password);
+    if(req.query.password == pass){
+        res.render("coaches.ejs");
+    }
+    else{
+        res.redirect("/error");
+    }
+})
 
 //Renders main page.
 app.get("/start", (req, res)=>{

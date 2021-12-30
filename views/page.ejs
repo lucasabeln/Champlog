@@ -19,7 +19,7 @@
     <body class="body">
             <div id="cat">
                 <form action="/get" method=get>
-                <label id="cat-id" class="lab">Get by Date:</label><br>
+                <label id="cat-id" class="lab">Find a Workout:</label><br>
                 <br>
                 <br>
                 <label id="input-label" onChange="update()" for="response3">Year:</label>
@@ -49,6 +49,7 @@
             <br>
                 <br>
                 <form id="log-form" action="/show" target="_blank" method="POST">
+                    <label id="cat-id" class="lab">Enter a New Workout:</label><br><br>
                     <label id="input-label"  onChange="update()" for="response1">Workout Type:   </label>
                     <select id="input" name="type" class="input">
                     <option value="Erg">Erg</option>

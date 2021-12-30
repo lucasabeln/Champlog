@@ -17,24 +17,31 @@
     flex: 0 25%;
     text-align: center;
     color: white;
-    background-color: rgba(0,0,0,.5);
+    background-color: rgba(0,0,0,.4);
+    margin:auto;
+    position:relative;
+    width: 400px; 
+    border-radius: 25px;
 }
 .lab{
     text-align: center;
     font-family: "Tahoma";
     font-size: 200%;
     font-style: italic;
-    color: Red;
+    color: white;
 }
 #log-canvas{
-    flex: 1 75%;
     background-size: 100%;
+    margin:auto;
+    position:relative;
+    width: 400px; 
+    border-radius: 25px;
 }
 #input-label{
     font-family: "Tahoma";
     font-size: 100%;
     font-style: italic;
-    color: Red;
+    color: white;
 }
 #check-label{
     font-family: "Tahoma";
