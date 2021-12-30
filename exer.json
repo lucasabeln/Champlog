@@ -1,0 +1,155 @@
+[{
+  "_id": {
+    "$oid": "61a9248de8ead49b708c558c"
+  },
+  "type": "Meditation",
+  "time": "01:00",
+  "Intensity": "5",
+  "month": "October",
+  "day": "8",
+  "username": "labeln",
+  "monthID": "10"
+},{
+  "_id": {
+    "$oid": "61a924a1e8ead49b708c558d"
+  },
+  "type": "Meditation",
+  "time": "02:45",
+  "Intensity": "3",
+  "month": "January",
+  "day": "31",
+  "username": "labeln",
+  "monthID": "1"
+},{
+  "_id": {
+    "$oid": "61a924aee8ead49b708c558e"
+  },
+  "type": "Cardio",
+  "time": "01:23",
+  "Intensity": "2",
+  "month": "July",
+  "day": "8",
+  "username": "labeln",
+  "monthID": "7"
+},{
+  "_id": {
+    "$oid": "61a92549a1b745500957b2d9"
+  },
+  "type": "Meditation",
+  "time": "01:00",
+  "Intensity": "3",
+  "month": "March",
+  "day": "31",
+  "username": "labeln",
+  "monthID": "3"
+},{
+  "_id": {
+    "$oid": "61a95b62dd3c15c4667bd06d"
+  },
+  "type": "Meditation",
+  "time": "02:45",
+  "Intensity": "4",
+  "month": "July",
+  "day": "2",
+  "username": "labeln",
+  "monthID": "7"
+},{
+  "_id": {
+    "$oid": "61a965083cd681169f32a329"
+  },
+  "type": "Flexibility",
+  "time": "00:30",
+  "Intensity": "1",
+  "month": "November",
+  "day": "13",
+  "username": "labeln",
+  "monthID": "11"
+},{
+  "_id": {
+    "$oid": "61a96bf1b2b0277e8578cd76"
+  },
+  "type": "Flexibility",
+  "time": "01:00",
+  "Intensity": "5",
+  "month": "October",
+  "day": "23",
+  "username": "labeln",
+  "monthID": "10"
+},{
+  "_id": {
+    "$oid": "61a96c25b2b0277e8578cd77"
+  },
+  "type": "Cardio",
+  "time": "01:23",
+  "Intensity": "2",
+  "month": "September",
+  "day": "8",
+  "username": "labeln",
+  "monthID": "9"
+},{
+  "_id": {
+    "$oid": "61ae6de35bbbaa2d2ee0423d"
+  },
+  "type": "Cardio",
+  "time": "01:23",
+  "Intensity": "4",
+  "month": "January",
+  "day": "12",
+  "username": "labeln",
+  "monthID": "1"
+},{
+  "_id": {
+    "$oid": "61aea771fd150ad218c053de"
+  },
+  "type": "Weights",
+  "time": "2:13",
+  "Intensity": "1",
+  "month": "December",
+  "day": "11",
+  "username": "labeln",
+  "monthID": "12"
+},{
+  "_id": {
+    "$oid": "61aea7b0d461b3c59636dd4f"
+  },
+  "type": "Cardio",
+  "time": "02:45",
+  "Intensity": "2",
+  "month": "April",
+  "day": "2",
+  "username": "labeln",
+  "monthID": "4"
+},{
+  "_id": {
+    "$oid": "61aeacff201c22c90882dac6"
+  },
+  "type": "Cardio",
+  "time": "03:23",
+  "Intensity": "3",
+  "month": "February",
+  "day": "21",
+  "username": "labeln",
+  "monthID": "2"
+},{
+  "_id": {
+    "$oid": "61aead792f898545ad9065fc"
+  },
+  "type": "Cardio",
+  "time": "01:23",
+  "Intensity": "4",
+  "month": "December",
+  "day": "12",
+  "username": "labeln",
+  "monthID": "12"
+},{
+  "_id": {
+    "$oid": "61aeaf841c8496a0382d97a0"
+  },
+  "type": "Cardio",
+  "time": "01:23",
+  "Intensity": "3",
+  "month": "May",
+  "day": "8",
+  "username": "labeln",
+  "monthID": "5"
+}]

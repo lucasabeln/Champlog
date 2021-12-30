@@ -1,0 +1,27 @@
+{
+  "name": "finalproject",
+  "version": "1.0.0",
+  "description": "(Final Project for Web Development 314)",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \\\"Error: no test specified\\\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gonzaga-CPSC-Fall-2021-Olivares/cpsc-314-web-development-final-project-lucasabeln.git"
+  },
+  "author": "Lucas Abeln",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gonzaga-CPSC-Fall-2021-Olivares/cpsc-314-web-development-final-project-lucasabeln/issues"
+  },
+  "homepage": "https://github.com/Gonzaga-CPSC-Fall-2021-Olivares/cpsc-314-web-development-final-project-lucasabeln#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-mongo-sanitize": "^2.1.0",
+    "mongo-sanitize": "^1.1.0",
+    "mongodb": "^4.2.0"
+  }
+}

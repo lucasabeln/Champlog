@@ -1,0 +1,43 @@
+<!-- 
+    Name: Lucas Abeln
+    Class: Web Development
+    Assignment: WPD4
+    Last Modified: 12/6/21
+    Desc: Logs page html document
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="/public/style.css" type="text/css">
+  <title>Log</title>
+</head>
+<body>
+    <h2>Logs<h2>
+        <table class="data-table">
+          <thead class="data-headers">
+            <tr>
+              <td>Type</td>
+              <td>Time</td>
+              <td>Intensity</td>
+              <td>Month</td>
+              <td>Day</td>
+            </tr>
+          </thead>
+          <tbody>
+          <% exer.forEach(function(details) { %>
+            <tr>
+              <td><%= details.type %></td>
+              <td><%= details.time %></td>
+              <td><%= details.Intensity %></td>
+              <td><%= details.month %></td>
+              <td><%= details.day %></td>
+              <td><a href="/delete/<%= details._id %>">Delete</a></td>
+            </tr>
+          <% }) %>
+          </tbody>
+    </body>
+    <button class="back-btn"><a href="/start">Back to EXERLOG</a></button>
+    <br>
+</html>
